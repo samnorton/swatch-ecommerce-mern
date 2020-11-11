@@ -2117,8 +2117,7 @@ article .more-link a:hover:after {
 
 .parallax {
 	width: 100%;
-	background-attachment: fixed;
-	background-position: 50% 0;
+    background-color: #F7F7F7;
 }
 .parallax .overlay {
 	position: absolute;
