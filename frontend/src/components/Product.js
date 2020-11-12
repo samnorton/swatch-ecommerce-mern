@@ -1,35 +1,40 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Rating from './Rating'
 
-const Product = ({ product}) => {
+const Product = ({ product }) => {
 
-    const { name, image, brand, price, category } = product
+    const { _id, name, image, rating, numReviews, price, category } = product
+    
     return (
         <>
                                      <li className="product-item">
                                     <div className="product-thumb clearfix">
-                                        <a href="#">
-                                            <img src={image}  />
-                                        </a>
+                                        <Link to={`/product/${_id}`}>
+                                        <img src={process.env.PUBLIC_URL + image} />
+
+                                        </Link>
                                    
                                     </div>
                                     <div className="product-info clearfix">
-                                           <span className="product-title">{name}</span>
+                                           <Link to={`/product/${_id}`} className="product-title">{name}</Link>
                                         <div className="price">
                                             <ins>
-                                                <span className="amount">{price}</span>
+                                                <span className="amount">${price}</span>
+                                                <Rating value={rating} text={`${numReviews}`} />
                                             </ins>
                                         </div>
                                         <div className="category">
                                             <ins>
-                                                <a href="#">{category}</a>
+                                                <Link to="#">{category}</Link>
                                             </ins>
                                         </div>
             
                                     </div>
                                     <div className="add-to-cart text-center">
-                                        <a href="#">ADD TO CART</a>
+                                        <Link to="#">ADD TO CART</Link>
                                     </div>
-                                    <a href="#" className="like"><i className="fa fa-heart-o"></i></a>
+                                    <Link to="#" className="like"><i className="fa fa-heart-o"></i></Link>
                                 </li>
 
         </>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 
 const Navbar = () => {
@@ -6,27 +7,27 @@ const Navbar = () => {
         <>
                 <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">
-                            <a href="index.html" title="logo" className="navbar-brand">
-                                <img src={logo} alt="image" width="107" height="24" />
-                            </a>
+                            <Link to='/' title="logo" className="navbar-brand">
+                                <img src={logo} width="107" height="24" />
+                            </Link>
                             <button className="navbar-toggler custom-togglercustom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="" role="button" ><i className="fa fa-bars" aria-hidden="true" style={{color: "#e6e6ff"}}></i></span>
                             </button>
                           <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ml-auto mb-2 mb-lg-0 text-left">
                               <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">HOME</a>
+                                <Link className="nav-link active" aria-current="page" to='/'>HOME</Link>
                               </li>
                               <li className="nav-item">
-                                <a className="nav-link" href="#">SHOP</a>
-                              </li>
-
-                              <li className="nav-item">
-                                <a className="nav-link" href="#">FAQ</a>
+                                <Link className="nav-link" to='/shop'>SHOP</Link>
                               </li>
 
                               <li className="nav-item">
-                                <a className="nav-link" href="#">CONTACT</a>
+                                <Link className="nav-link" to='/'>FAQ</Link>
+                              </li>
+
+                              <li className="nav-item">
+                                <Link className="nav-link" to='/'>CONTACT</Link>
                               </li>
                             </ul>
 
@@ -36,7 +37,7 @@ const Navbar = () => {
                                     <a className="icon_login" href="#"></a>
                                 </li>
                                 <li className="box-cart nav-top-cart-wrapper">
-                                    <a className="icon_cart nav-cart-trigger active" href="#"><span>3</span></a>
+                                    <Link className="icon_cart nav-cart-trigger active" to='/cart'><span>3</span></Link>
                                     <div className="nav-shop-cart">
                                         <div className="widget_shopping_cart_content">
                                             <div className="woocommerce-min-cart-wrap">

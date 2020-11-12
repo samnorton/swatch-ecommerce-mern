@@ -10,12 +10,10 @@ const App = () => {
   return (
     <>
     <div className="boxed"> 
-     <Header />
          <Hero />
          <RecentProducts />
          <Advert />
          <PopularProducts />
-       <Footer />
      </div>
    </>
   );
