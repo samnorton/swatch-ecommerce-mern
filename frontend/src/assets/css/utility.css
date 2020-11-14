@@ -966,9 +966,7 @@
 	z-index: -1;
 }
 
-.flat-color-list li a.yellow:before {
-	border-color: #faed34;
-}
+
 
 .flat-color-list li a.pink:before {
 	border-color: #f5eaea;
@@ -982,17 +980,8 @@
 	border-color: #000;
 }
 
-.flat-color-list li a.purple:before {
-	border-color: #684ddc;
-}
 
-.flat-color-list li a.khaki:before {
-	border-color: #cfc300;
-}
 
-.flat-color-list li a.blue:before {
-	border-color: #7cc576;
-}
 
 .flat-color-list li a:hover:after { 
 	opacity: 1;
@@ -1053,11 +1042,16 @@
 	        transform: translate(0px, 10px);
 }
 
-.product .product-item .add-to-cart a {
+.product .product-item .add-to-cart {
 	font-weight: 700;
 	line-height: 50px;
 	color: #ffffff;
 }
+
+.product .product-item button.add-to-cart{
+  width: 100%;
+}
+
 
 .product .product-item .like {
 	font-size: 18px;
@@ -1079,7 +1073,7 @@
 	        transform: translate(30px ,0px);
 }
 
-.product .product-item:hover .add-to-cart, .product .product-item:hover .like {
+.product .product-item:hover .add-to-cart, .product .product-item:hover .like, button.add-to-cart{
 	opacity: 1;
 	visibility: visible;
 	-webkit-transform: translate(0px,0px);
@@ -1786,7 +1780,7 @@
 	margin-left: 6px;
 }
 
-.product-detail .add-to-cart a {
+.product-detail .add-to-cart button {
 	font-weight: 700;
 	color: #fff;
 	display: block;
@@ -1795,7 +1789,11 @@
 	background-color: #f63440;
 }
 
-.product-detail .add-to-cart a:hover {
+.product-detail .add-to-cart button:hover {
+	background-color: #333;
+}
+
+.product-detail .add-to-cart button:disabled{
 	background-color: #333;
 }
 
@@ -2667,7 +2665,8 @@
 	font-weight: 600;
 }
 
-.flat-gallery.style-1 .thumb img {
+ .thumb img {
+	width: 400px;
 	-webkit-transition: transform 0.3s ease-in-out;
 	   -moz-transition: transform 0.3s ease-in-out;
 	    -ms-transition: transform 0.3s ease-in-out;
@@ -2675,14 +2674,6 @@
 	        transition: transform 0.3s ease-in-out;
 }
 
-.flat-gallery.style-1 .thumb:hover img {
-	transform: scale(1.05);
-}
-
-.flat-gallery.has-absolute .thumb {
-	position: relative;
-	overflow: hidden;
-}
 
 .flat-gallery.has-absolute .text-wrap {
 	position: absolute;

@@ -1,6 +1,10 @@
 import React from 'react'
+import imgProduct from '../assets/images/sample-product.jpg'
+import avatar from '../assets/images/avatar.png'
 
-const ProductSubDetail = () => {
+
+const ProductSubDetail = ({ image, additionalDescription, weight, color,  material}) => {
+   
     return (
         <>
         <section className="flat-row shop-detail-content">
@@ -31,15 +35,14 @@ const ProductSubDetail = () => {
                                             <div className="grid-row image-left clearfix">
                                                 <div className="grid-item">
                                                     <div className="thumb text-center">
-                                                        <img src="images/shop/sh-detail/detail-desc-01.jpg" />
+                                                        <img src={imgProduct} />
                                                     </div>                                                  
                                                 </div>
                                                 
 
                                                 <div className="grid-item">
                                                     <div className="text-wrap">
-                                                        <h6 className="title">100 % alligator</h6>
-                                                        <p>Fashion has always been so temporary and uncertain. You can’t keep up with it. This social phenomenon is very whimsical, thus we as the consumers always try to stay in touch with all the latest fash- ion tendencies. </p>
+                                                        <p>{additionalDescription}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -53,19 +56,15 @@ const ProductSubDetail = () => {
                                             <table>
                                                 <tr>
                                                     <td>Weight</td>
-                                                    <td>1.73 kg</td>
+                                                    <td>{weight} kg</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Dimensions</td>
-                                                    <td>100 x 37 x 100 cm</td>
+                                                    <td>Material</td>
+                                                    <td>{material}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Materials</td>
-                                                    <td>80% cotton, 20% linen</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Size</td>
-                                                    <td>One Size, XL, L, M, S</td>
+                                                    <td>Color</td>
+                                                    <td>{color}</td>
                                                 </tr>                       
                                             </table>
                                         </div>                                      
@@ -75,11 +74,11 @@ const ProductSubDetail = () => {
                                             <ol className="review-list">
                                                 <li className="review">
                                                     <div className="thumb">
-                                                        <img src="images/avatar-1.png" />
+                                                        <img src={avatar} />
                                                     </div>
                                                     <div className="text-wrap">
-                                                        <div className="review-meta">
-                                                            <h5 className="name">Sophia Rosla</h5>
+                                                        <div className="review-meta"> 
+                                                            <h5 className="name">Sophia Buerat</h5>
                                                             <div className="flat-star style-1">
                                                                 <i className="fa fa-star"></i>
                                                                 <i className="fa fa-star"></i>
@@ -95,11 +94,11 @@ const ProductSubDetail = () => {
                                                 </li>
                                                 <li className="review">
                                                     <div className="thumb">
-                                                        <img src="images/avatar.png" />
+                                                       <img src={avatar} />
                                                     </div>
                                                     <div className="text-wrap">
                                                         <div className="review-meta">
-                                                            <h5 className="name">Jayne Haughton</h5>
+                                                            <h5 className="name">Chris Horton</h5>
                                                             <div className="flat-star style-1">
                                                                 <i className="fa fa-star"></i>
                                                                 <i className="fa fa-star"></i>

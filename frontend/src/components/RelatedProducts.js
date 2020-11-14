@@ -1,4 +1,5 @@
 import React from 'react'
+import imgProduct from '../assets/images/sample-product.jpg'
 
 const RelatedProducts = () => {
     return (
@@ -16,7 +17,7 @@ const RelatedProducts = () => {
                                 <li className="product-item">
                                     <div className="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-4/1.jpg" />
+                                            <img src={imgProduct} />
                                         </a>
                                     </div>
                                     <div className="product-info clearfix">
@@ -35,7 +36,7 @@ const RelatedProducts = () => {
                                 <li className="product-item">
                                     <div className="product-thumb clearfix">
                                         <a href="#">
-                                            <img src="images/shop/sh-4/2.jpg" />
+                                            <img src={imgProduct} />
                                         </a>
                                     </div>
                                     <div className="product-info clearfix">
@@ -54,7 +55,7 @@ const RelatedProducts = () => {
                                 <li className="product-item">
                                     <div className="product-thumb clearfix">
                                         <a href="#" className="product-thumb">
-                                            <img src="images/shop/sh-4/3.jpg" />
+                                            <img src={imgProduct} />
                                         </a>
                                     </div>
                                     <div className="product-info clearfix">
@@ -73,7 +74,7 @@ const RelatedProducts = () => {
                                 <li className="product-item">
                                     <div className="product-thumb clearfix">
                                         <a href="#" className="product-thumb">
-                                            <img src="images/shop/sh-4/4.jpg" />
+                                            <img src={imgProduct} />
                                         </a>
                                     </div>
                                     <div className="product-info clearfix">

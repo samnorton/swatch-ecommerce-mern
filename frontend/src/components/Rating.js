@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Products from './Products'
 
 const Rating = ({ value, text }) => {
     return (
@@ -45,7 +44,7 @@ const Rating = ({ value, text }) => {
     )
 }
 
-Rating.PropTypes = {
+Rating.propTypes = {
     value: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired
 }

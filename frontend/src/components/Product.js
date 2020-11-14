@@ -32,7 +32,7 @@ const Product = ({ product }) => {
             
                                     </div>
                                     <div className="add-to-cart text-center">
-                                        <Link to="#">ADD TO CART</Link>
+                                        <button type="button" className="btn-block">ADD TO CART</button>
                                     </div>
                                     <Link to="#" className="like"><i className="fa fa-heart-o"></i></Link>
                                 </li>
