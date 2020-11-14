@@ -42,7 +42,7 @@ const ProductMainDetail = ({ product }) => {
                         					<span className="dec quantity-button">-</span>
                         				</div>
                         				<div className="add-to-cart">
-                        					<button type="button" disabled={countInStock === 0}>ADD TO CART</button>
+                        					<button class="full-width-btn" type="button" disabled={countInStock === 0}>ADD TO CART</button>
                         				</div>
                         				<div className="box-like">
                         					<a href="#" className="like"><i className="fa fa-heart-o"></i></a>

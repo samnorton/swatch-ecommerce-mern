@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Product from './Product'
 import Pagination from './Pagination'
 import products from '../products'
 
 const Products = () => {
+    
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+       const fetchProducts = async () => {
+           const { data } = await axios.get('/api/products')
+           setProducts(data)
+       }
+
+       fetchProducts()
+    }, []);
+
     return (
         <>
               <div className="col-md-9">
