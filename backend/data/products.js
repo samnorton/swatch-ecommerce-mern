@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Baume & Mercier',
     image: './product.jpg',
     description:
@@ -17,7 +16,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Ben Sherman',
     image: './product.jpg',
     description:
@@ -34,7 +32,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Armani Exchange',
     image: './product.jpg',
     description:
@@ -51,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Casio',
     image: './product.jpg',
     description:
@@ -68,7 +64,7 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
+
     name: 'Certina',
     image: './product.jpg',
     description:
@@ -85,7 +81,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '7',
     name: 'Daniel Wellington',
     image: './product.jpg',
     description:
@@ -102,7 +97,6 @@ const products = [
     numReviews: 4,
   },
   {
-    _id: '8',
     name: 'Frederique Constant',
     image: './product.jpg',
     description:
@@ -119,7 +113,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '9',
     name: 'Henry London',
     image: './product.jpg',
     description:
@@ -136,7 +129,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '10',
     name: 'Juicy Couture',
     image: './product.jpg',
     description:
@@ -153,7 +145,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '11',
     name: 'Larsson & Jennings',
     image: './product.jpg',
     description:
@@ -170,7 +161,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '12',
     name: 'Michael Kors Access',
     image: './product.jpg',
     description:
