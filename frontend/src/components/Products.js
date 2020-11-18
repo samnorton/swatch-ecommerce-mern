@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 import Product from './Product'
 import Pagination from './Pagination'
-import products from '../products'
+import Message from './Message'
+import Loader from './Message'
 
-const Products = () => {
-    
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-       const fetchProducts = async () => {
-           const { data } = await axios.get('/api/products')
-           setProducts(data)
-       }
-
-       fetchProducts()
-    }, []);
-
+const Products = ({ products}) => {
     return (
         <>
-              <div className="col-md-9">
+
+    <div className="col-md-9">
                         <div className="filter-shop clearfix">
                             <p className="showing-product float-right">
                                 Showing 1–12 of 56 Products
@@ -36,6 +25,7 @@ const Products = () => {
 
                        <Pagination />
                     </div>
+              
 
         </>
     )
