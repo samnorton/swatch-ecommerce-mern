@@ -1,28 +1,35 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import HeaderTitle from '../components/HeaderTitle'
 import ProductMainDetail from '../components/ProductMainDetail'
 import ProductSubDetail from '../components/ProductSubDetail'
 import RelatedProducts from '../components/RelatedProducts'
-import products from '../products'
-import axios from 'axios'
+import Message from '../components/Message'
+import Loader from '../components/Message'
+import { listProductDetails, listProducts } from '../actions/productActions'
 
 
 const ProductDetail = ({ match }) => {
-	// const product = products.find((p) => p._id === match.params.id);
-    const [product, setProduct] = useState({})
+    const dispatch = useDispatch()
+
+    const productDetails = useSelector(state => state.productDetails)
+    const { loading, error, product } = productDetails
 
     useEffect(() => {
-        const fetchProduct = async () => {
-            const { data } = await axios.get(`/api/products/${match.params.id}`)
-            setProduct(data)
-        }
- 
-        fetchProduct()
-     }, [match]);
+        dispatch(listProductDetails(match.params.id))
+     }, [dispatch, match]);
+
 
     return (
         <>  
             <HeaderTitle />
+
+            { loading ? 
+               ( <Loader /> )
+               : error ? (
+               <Message variant='danger'>{error}</Message>
+               ) : (
+            <>
             <ProductMainDetail product={product}/>
             <ProductSubDetail 
                image={product.image}
@@ -32,6 +39,9 @@ const ProductDetail = ({ match }) => {
                material={product.material}
             />
             <RelatedProducts />
+            </>
+            )
+        }
         </>
     )
 }
